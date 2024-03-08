@@ -38,8 +38,8 @@ const userSchema = new mongoose.Schema(
       type: String,
     },
     password: {
-      tpye: String,
-      required: [true, "passwrod is required"],
+      type: String,
+      required: true , 
     },
     refreshToken: {
       type: String,
@@ -67,7 +67,7 @@ userSchema.methods.generateAcceessToken = function () {
     },
     process.env.ACCESS_TOKEN_SCERET,
     {
-      expiresIn: proces.env.ACCESS_TOKEN_EXPIRY,
+      expiresIn: process.env.ACCESS_TOKEN_EXPIRY,
     }
   );
 };
@@ -78,7 +78,7 @@ userSchema.methods.generateRefreshToken = function () {
     },
     process.env.REFRESH_TOKEN_SECRET,
     {
-      expiresIn: proces.env.REFRESH_TOKEN_EXPIRY,
+      expiresIn: process.env.REFRESH_TOKEN_EXPIRY,
     }
   );
 };
