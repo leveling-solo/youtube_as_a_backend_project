@@ -318,7 +318,7 @@ const updateUserCoverImage = asyncHandler(async (req, res) => {
       new APiResponse(200, { user }, "CoverImage updated sucessfully")
     );
 });
-// checking the git problem is solved or not
+// now i try using commit without command
 export {
   registeUser,
   loginUser,
